@@ -1,0 +1,87 @@
+@font-face{
+	font-family: "BebasNeueBold";
+	font-style: normal;
+	font-weight: normal;
+	src: local("?"), url("../fonts/BebasNeueBold.woff") format("woff");
+}
+
+
+body{
+  background: #efefef;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+h1{
+	font-family: BebasNeueBold;
+}
+
+.help-block{
+  margin: 5px 0 0;
+  color: #red;
+  font-size: 11px;
+}
+
+
+.formLogin{
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 460px;
+  margin: 50px auto 170px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.formLogin .message{
+  margin: 15px 0 0;
+  color: #999;
+  font-size: 12px;
+}
+
+.formLogin .message2{
+  margin: 5px 0 0;
+  color: #999;
+  font-size: 11px;
+}
+
+.formLogin .register-form{
+  display: none;
+}
+
+.formLogin .register-form .textMessage{
+  margin: 5px 5px 0;
+  color: #999;
+  font-size: 11px;
+  text-align: left;
+}
+
+
+.form-group .help-block {
+  display: none;
+}
+
+
+.form-group.has-error .help-block {
+  display: block;
+}
+
+
+
+p {
+    margin: 12px 0 10px;
+
+}
+
+
+
+#area{
+	background-color:#efefef;
+	width:90%;	
+	height:100%;
+	padding:80px 20px 20px 20px;	
+	box-shadow: 0px 0px 8px #555555;	
+}

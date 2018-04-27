@@ -1,0 +1,98 @@
+<html>
+<head>
+</head>
+<body>
+	
+	<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+          <h1 style="color:#FFF; font-size:25px; padding-left:10px">SISTEMA DE CONTROL Y GESTION</h1>
+      </div>
+	</div>
+	
+  <section style="padding:50px">
+		  <div class="formLogin">
+					
+					<form id="frmRegistro" class="register-form">
+							
+							<div class="form-group">
+								<h1 style="color:#black; font-size:30px;">SOLICITUD CUENTA DE USUARIO</h1>
+							</div>	
+							
+							<div class="form-group">
+								<input type="text" class="form-control" id="txtUserRegistro"/>
+								<p class="textMessage">(*) Ingrese RUT completo</p>
+							</div>
+							<div class="form-group">
+				      	<input type="text" class="form-control" id="txtNombresRegistro"/>
+				      	<p class="textMessage">(*) Ingrese Nombres</p>
+				      </div>
+				      <div class="form-group">
+				      	<input type="text" class="form-control" id="txtApellidoPaternoRegistro"/>
+				      	<p class="textMessage">(*) Ingrese Apellido Paterno</p>
+				      </div>	
+				      <div class="form-group">
+				      	<input type="text" class="form-control" id="txtApellidoMaternoRegistro"/>
+				      	<p class="textMessage">(*) Ingrese Apellido Materno</p>
+				      </div>	
+				      <!--
+				      <div class="form-group">
+								<input type="password" class="form-control" id="txtContraseña"/>
+								<p class="textMessage">(*) La contrase&ntilde;a debe al menos tener 4 car&aacutecteres de largo</p>
+							</div>	
+							<div class="form-group">
+								<input type="password" class="form-control" id="txtRepitaContraseña"/>
+								<p class="textMessage">(*) Repita su contrase&ntilde;a una vez m&aacutes para verificar</p>
+							</div>
+							-->
+							<div class="form-group">
+								<input type="text" class="form-control" id="txtEmail"/>
+								<p class="textMessage">(*) Ingrese una direcci&oacuten de correo v&aacutelida</p>
+							</div>	
+							
+							<input type="button" class="btn btn-primary" style="width:100%; background-color:#1e4f1f" id="btnCrear" value="CREAR"/>							
+							<p class="message">Ya tienes cuenta? <a href="#">Iniciar Sesi&oacuten</a></p>
+							<p class="message2" style="">(*) Campos Obligatorios</p>
+							
+		    	</form>
+		      
+		      
+		      <form id="frmLogueo" name="frmLogueo" ng-submit="entrar()">
+		      	
+		      		<div class="form-group" show-validation align="left">
+									<div class="input-group">
+										<div class="input-group-addon">
+											<i class="glyphicon glyphicon-user"></i>
+										</div>
+										<input type="text" class="form-control" id="txtRut" ng-model="txtRut" name="txtRut" placeholder="Rut">																				
+										<span ng-show="frmLogueo.txtRut.$error.required" class="help-block glyphicon glyphicon-remove form-control-feedback"></span>
+									</div>									
+									<span ng-show="frmLogueo.txtRut.$error.required" class="help-block">El RUT es requerido.</span>
+							</div>
+							
+							<div class="form-group" show-validation align="left">
+									<div class="input-group">
+										<div class="input-group-addon">
+											<i class="glyphicon glyphicon-lock"></i>
+										</div>
+										<input type="password" class="form-control" id="txtPassword" ng-model="txtPassword" name="txtPassword" placeholder="Contraseña">										
+										<span ng-show="frmLogueo.txtPassword.$error.required" class="help-block glyphicon glyphicon-remove form-control-feedback"></span>
+									</div>									
+									<span class="help-block" ng-show="frmLogueo.txtPassword.$error.required">La Contraseña es requerida.</span>
+							</div>
+							
+		          <button type="submit" class="btn btn-primary" style="width:100%; background-color:#1e4f1f">ENTRAR</button>	    
+		      		<p class="message">No tienes cuenta de Usuario? <a href="#">Crear Cuenta</a></p>
+		      		
+		    	</form>
+		    	
+		  </div>
+  </section>
+  
+  <script>
+		$('.message a').click(function(){
+		   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");		   
+		});
+	</script>    		
+  		
+</body>
+</html>
